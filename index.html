@@ -113,7 +113,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section with Direct Portfolio Link -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-6">
@@ -150,7 +150,7 @@
         </div>
     </section>
 
-    <!-- WealthPulse Simulator Live Interactive Section (Full Sidebar & Language Switcher Enabled) -->
+    <!-- WealthPulse Simulator Live Interactive Section -->
     <section id="wealthpulse-section" class="py-20 bg-slate-100 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -180,7 +180,7 @@
 
                 <!-- Embedded Live App iFrame -->
                 <div class="w-full h-[850px] bg-slate-50 relative overflow-hidden">
-                    <iframe src="https://wealthpulse-simulator.streamlit.app/?embed=true" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
+                    <iframe src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
                 </div>
             </div>
 
@@ -281,13 +281,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Language Switching -->
+    <!-- JavaScript for Synchronized Language Switching -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
             const htmlRoot = document.getElementById('html-root');
             const langBtn = document.getElementById('lang-btn');
             const elements = document.querySelectorAll('[data-en]');
+            const appFrame = document.querySelector('iframe[title="WealthPulse Simulator"]');
 
             if (currentLang === 'en') {
                 currentLang = 'ar';
@@ -297,6 +298,9 @@
                 elements.forEach(el => {
                     if(el.dataset.ar) el.innerHTML = el.dataset.ar;
                 });
+                if(appFrame) {
+                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=ar";
+                }
             } else {
                 currentLang = 'en';
                 htmlRoot.setAttribute('lang', 'en');
@@ -305,6 +309,9 @@
                 elements.forEach(el => {
                     if(el.dataset.en) el.innerHTML = el.dataset.en;
                 });
+                if(appFrame) {
+                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en";
+                }
             }
         }
     </script>
