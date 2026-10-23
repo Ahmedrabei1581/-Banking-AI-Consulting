@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
+<html lang="en" id="html-root" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eng. Ahmed Rabei | Banking & Financial AI Consulting</title>
+    <title>Eng. Ahmed Rabie | AI-Driven Banking & Financial Advisory</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Cairo & Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts (Inter & Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-
+        body { font-family: 'Inter', 'Cairo', sans-serif; }
         .glass-card {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -23,99 +19,90 @@
         }
     </style>
 </head>
-
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Header / Navigation -->
     <header class="sticky top-0 z-50 glass-card shadow-sm border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <div
-                    class="w-10 h-10 bg-blue-950 text-amber-400 rounded-xl flex items-center justify-center font-bold text-xl shadow">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-10 h-10 bg-blue-950 text-amber-400 rounded-xl flex items-center justify-center font-bold text-xl shadow">
                     AR
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold text-slate-900 leading-none">م. أحمد ربعي</h1>
-                    <span class="text-xs text-slate-500">Banking & AI Financial Consultant</span>
+                    <h1 class="text-lg font-bold text-slate-900 leading-none" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</h1>
+                    <span class="text-xs text-slate-500" data-en="AI & Banking Advisory" data-ar="استشارات المصرفية والذكاء الاصطناعي">AI & Banking Advisory</span>
                 </div>
             </div>
 
             <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
-                <a href="#about" class="hover:text-blue-900 transition">عن الخبير</a>
-                <a href="#services" class="hover:text-blue-900 transition">الخدمات الاستشارية</a>
-                <a href="#apps" class="hover:text-blue-900 transition">التطبيقات الذكية</a>
-                <a href="#contact"
-                    class="bg-blue-950 text-amber-400 px-5 py-2 rounded-xl hover:bg-blue-900 transition shadow">حجز
-                    استشارة</a>
+                <a href="#about" class="hover:text-blue-900 transition" data-en="About" data-ar="عن الخبير">About</a>
+                <a href="#ai-advisory" class="hover:text-blue-900 transition" data-en="AI Advisory" data-ar="الاستشارات الذكية">AI Advisory</a>
+                <a href="#apps" class="hover:text-blue-900 transition" data-en="AI & Financial Apps" data-ar="التطبيقات الذكية">AI & Financial Apps</a>
+                <!-- Language Switcher Button -->
+                <button onclick="toggleLanguage()" id="lang-btn" class="bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-300 transition">
+                    العربية 🇸🇦
+                </button>
+                <a href="#contact" class="bg-blue-950 text-amber-400 px-5 py-2 rounded-xl hover:bg-blue-900 transition shadow" data-en="Book Consultation" data-ar="حجز استشارة">Book Consultation</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section
-        class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24 overflow-hidden">
-        <div
-            class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]">
-        </div>
+    <section class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7 text-right">
-                <div
-                    class="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700/50 text-amber-300 text-xs px-4 py-1.5 rounded-full mb-6">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <span>أكثر من 20 عاماً في العمليات المصرفية والذكاء الاصطناعي</span>
+            <div class="md:col-span-7 text-start rtl:text-right">
+                <div class="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700/50 text-amber-300 text-xs px-4 py-1.5 rounded-full mb-6">
+                    <i class="fa-solid fa-brain"></i>
+                    <span data-en="Next-Gen Banking Advisory Powered by Artificial Intelligence" data-ar="استشارات مصرفية من الجيل القادم مدعومة بالذكاء الاصطناعي">Next-Gen Banking Advisory Powered by Artificial Intelligence</span>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-                    تمكين المؤسسات المصرفية والمالية بـ <span class="text-amber-400">الحلول الذكية</span> والنماذج
-                    التنبؤية
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">
+                    Eng. Ahmed Rabie
                 </h1>
-                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
-                    نجمع بين الفهم العميق لإدارة المخاطر والالتزام المصرفي، وبين أحدث تقنيات علوم البيانات والأتمتة
-                    لتطوير حلول مالية دقيقة وآمنة.
+                <p class="text-xl md:text-2xl text-amber-400 font-semibold mb-6" data-en="Transforming Banking Operations & Risk with Cutting-Edge AI Solutions" data-ar="تحويل العمليات المصرفية وإدارة المخاطر بأحدث حلول الذكاء الاصطناعي">
+                    Transforming Banking Operations & Risk with Cutting-Edge AI Solutions
+                </p>
+                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed" data-en="Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and AI automation to empower financial institutions." data-ar="نربط بين أكثر من 20 عاماً من الخبرة المصرفية العميقة وبين علوم البيانات المتقدمة، التعلم الآلي، وأتمتة الذكاء الاصطناعي لتمكين المؤسسات المالية.">
+                    Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and AI automation to empower financial institutions.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#apps"
-                        class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
-                        <i class="fa-solid fa-rocket"></i> تجربة التطبيقات التفاعلية
+                    <a href="#apps" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-rocket"></i> <span data-en="Explore AI Solutions" data-ar="استكشف الحلول الذكية">Explore AI Solutions</span>
                     </a>
-                    <a href="#contact"
-                        class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-xl transition">
-                        تواصل معنا
+                    <a href="#contact" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-xl transition" data-en="Contact Expert" data-ar="تواصل مع الخبير">
+                        Contact Expert
                     </a>
                 </div>
             </div>
-
+            
             <div class="md:col-span-5 flex justify-center">
-                <div
-                    class="relative w-full max-w-md bg-gradient-to-tr from-blue-900/40 to-slate-800/40 border border-slate-700/60 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
+                <div class="relative w-full max-w-md bg-gradient-to-tr from-blue-900/40 to-slate-800/40 border border-slate-700/60 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-chart-line"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-microchip"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-white">التحليل المالي والتنبؤ</h3>
-                                <p class="text-xs text-slate-400">نمذجة المبيعات والعوائد باستخدام ML</p>
+                                <h3 class="font-bold text-white" data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي والتعلم الآلي">AI & Machine Learning</h3>
+                                <p class="text-xs text-slate-400" data-en="Predictive models for banking credit & risk" data-ar="نماذج تنبؤية للائتمان والمخاطر المصرفية">Predictive models for banking credit & risk</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-building-columns"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-chart-pie"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-white">العمليات والمخاطر المصرفية</h3>
-                                <p class="text-xs text-slate-400">تقييم مخاطر الائتمان والالتزام</p>
+                                <h3 class="font-bold text-white" data-en="Smart Financial Analytics" data-ar="التحليل المالي الذكي">Smart Financial Analytics</h3>
+                                <p class="text-xs text-slate-400" data-en="Automated yield & interest simulations" data-ar="محاكاة العوائد والفوائد الآلية">Automated yield & interest simulations</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-gears"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-network-wired"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-white">أتمتة سير العمل (Automation)</h3>
-                                <p class="text-xs text-slate-400">حلول n8n وربط الأنظمة عبر APIs</p>
+                                <h3 class="font-bold text-white" data-en="Workflow Automation" data-ar="أتمتة سير العمل">Workflow Automation</h3>
+                                <p class="text-xs text-slate-400" data-en="n8n & API integrations for efficiency" data-ar="حلول n8n وربط الأنظمة لرفع الكفاءة">n8n & API integrations for efficiency</p>
                             </div>
                         </div>
                     </div>
@@ -124,118 +111,68 @@
         </div>
     </section>
 
-    <!-- About Section (New) -->
+    <!-- About Section with Daily Interest App Link -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-6">
-                <span
-                    class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider">عن
-                    الخبير</span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-6">خبرة مصرفية عريقة تقودها الابتكارات التقنية</h2>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    يمتلك **مهندس أحمد ربعي** خبرة ممتدة لأكثر من **20 عاماً** في القطاع المصرفي، حيث شغل وظائف متقدمة
-                    في مجالات **العمليات المصرفية، إدارة المخاطر، والالتزام**. هذا الفهم العميق للتشريعات والدورات
-                    المستندية المصرفية مكّنه من دمج الخبرة التقليدية مع أدوات العصر الحديث.
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="About the Expert" data-ar="عن الخبير">About the Expert</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-6" data-en="Merging 20+ Years of Banking Mastery with AI Innovation" data-ar="دمج أكثر من 20 عاماً من الخبرة المصرفية مع ابتكارات الذكاء الاصطناعي">Merging 20+ Years of Banking Mastery with AI Innovation</h2>
+                <p class="text-slate-600 leading-relaxed mb-4" data-en="Eng. Ahmed Rabie brings over 20 years of extensive experience in banking operations, risk management, and regulatory compliance. Recognizing the digital evolution, he integrated advanced Data Science and AI to pioneer smart financial tooling." data-ar="يجلب المهندس أحمد ربعي خبرة تزيد عن 20 عاماً في العمليات المصرفية، إدارة المخاطر، والالتزام التنظيمي. وإدراكاً منه للتحول الرقمي، قام بدمج علوم البيانات المتقدمة والذكاء الاصطناعي لابتكار أدوات مالية ذكية.">
+                    Eng. Ahmed Rabie brings over 20 years of extensive experience in banking operations, risk management, and regulatory compliance. Recognizing the digital evolution, he integrated advanced Data Science and AI to pioneer smart financial tooling.
                 </p>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    بصفته مهندساً وخبيراً في **علوم البيانات والذكاء الاصطناعي وأتمتة العمليات (AI & Data Science)**،
-                    يعمل على سد الفجوة بين الأعمال المصرفية والحلول البرمجية الذكية عبر بناء أدوات ونماذج دقيقة تساعد
-                    البنوك والشركات على اتخاذ قرارات مدروسة وخفض المخاطر التشغيلية.
+                <p class="text-slate-600 leading-relaxed mb-6" data-en="As part of these innovations, visitors can explore interactive tools such as the <a href='https://ahmedrabei1581.github.io/#daily-interest-app' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>Daily Interest App</a> designed to simplify daily banking calculations and yield tracking." data-ar="وكجزء من هذه الابتكارات، يمكن للزوار استكشاف الأدوات التفاعلية مثل <a href='https://ahmedrabei1581.github.io/#daily-interest-app' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>تطبيق حساب الفائدة اليومية (Daily Interest App)</a> المصمم لتسهيل العمليات الحسابية وتتبع العوائد اليومية بدقة.">
+                    As part of these innovations, visitors can explore interactive tools such as the <a href="https://ahmedrabei1581.github.io/#daily-interest-app" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">Daily Interest App</a> designed to simplify daily banking calculations and yield tracking.
                 </p>
                 <div class="grid grid-cols-2 gap-4 pt-2">
                     <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <span class="block text-2xl font-bold text-blue-900 mb-1">+20 عاماً</span>
-                        <span class="text-xs text-slate-500">خبرة في العمليات المصرفية والمخاطر</span>
+                        <span class="block text-2xl font-bold text-blue-900 mb-1">20+ Years</span>
+                        <span class="text-xs text-slate-500" data-en="Banking Operations & Risk" data-ar="العمليات المصرفية وإدارة المخاطر">Banking Operations & Risk</span>
                     </div>
                     <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
                         <span class="block text-2xl font-bold text-amber-600 mb-1">AI & Data</span>
-                        <span class="text-xs text-slate-500">حلول الذكاء الاصطناعي والتحليل المتقدم</span>
+                        <span class="text-xs text-slate-500" data-en="Machine Learning & Automation" data-ar="التعلم الآلي والأتمتة">Machine Learning & Automation</span>
                     </div>
                 </div>
             </div>
             <div class="md:col-span-6 bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl"></div>
                 <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-amber-400"></i> رؤيتنا الاستشارية
+                    <i class="fa-solid fa-lightbulb text-amber-400"></i> <span data-en="Advisory Philosophy" data-ar="الفلسفة الاستشارية">Advisory Philosophy</span>
                 </h3>
-                <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                    "نؤمن بأن المستقبل المالي يعتمد على الدمج المحكم بين حوكمة المخاطر المصرفية الصارمة وبين كفاءة
-                    النماذج التنبؤية للذكاء الاصطناعي، مما يحقق قيمة مضافة حقيقية للمؤسسات والعملاء."
+                <p class="text-slate-300 text-sm leading-relaxed mb-6" data-en="&quot;Combining rigorous banking governance with state-of-the-art predictive AI models creates unmatched security, precision, and efficiency for modern financial institutions.&quot;" data-ar="&quot;إن دمج الحوكمة المصرفية الصارمة مع أحدث نماذج الذكاء الاصطناعي التنبؤية يحقق أماناً ودقة وكفاءة لا مثيل لها للمؤسسات المالية الحديثة.&quot;">
+                    "Combining rigorous banking governance with state-of-the-art predictive AI models creates unmatched security, precision, and efficiency for modern financial institutions."
                 </p>
                 <div class="border-t border-slate-800 pt-4 flex items-center justify-between text-xs text-slate-400">
-                    <span>م. أحمد ربعي</span>
-                    <span class="text-amber-400">استشاري معتمد للحلول المالية والذكاء الاصطناعي</span>
+                    <span data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</span>
+                    <span class="text-amber-400" data-en="Senior Banking & AI Consultant" data-ar="استشاري أول المصرفية والذكاء الاصطناعي">Senior Banking & AI Consultant</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Applications Showcase Section -->
+    <!-- AI & Financial Apps Showcase (Daily Interest App Card Removed) -->
     <section id="apps" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span
-                    class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider">Streamlit
-                    & AI Live Demos</span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-4">التطبيقات والأدوات التفاعلية</h2>
-                <p class="text-slate-600">تطبيقات خوارزمية تم نشرها وتطويرها لتوفير محاكاة دقيقة وتنبؤ مالي فوري.</p>
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Streamlit & AI Live Demos" data-ar="تطبيقات تفاعلية ونماذج ذكاء اصطناعي">Streamlit & AI Live Demos</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-4" data-en="Interactive AI & Financial Applications" data-ar="تطبيقات الذكاء الاصطناعي والحلول المالية">Interactive AI & Financial Applications</h2>
+                <p class="text-slate-600" data-en="Deployed algorithmic tools delivering accurate financial simulations, credit scoring, and predictive analysis." data-ar="أدوات خوارزمية تم نشرها لتقديم محاكاة مالية دقيقة، وتقييم ائتماني، وتحليل تنبؤي.">Deployed algorithmic tools delivering accurate financial simulations, credit scoring, and predictive analysis.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- App Card: Daily Interest App (New Added Link) -->
-                <div
-                    class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div
-                                class="w-12 h-12 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center text-2xl font-bold">
-                                <i class="fa-solid fa-percent"></i>
-                            </div>
-                            <span
-                                class="bg-blue-100 text-blue-800 text-xs px-2.5 py-1 rounded-full font-semibold">Interactive
-                                Tool</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Daily Interest App</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            تطبيق تفاعلي متخصص لحساب وتتبع عوائد الفائدة اليومية والشهادات البنكية بدقة، مصمم خصيصاً
-                            لتيسير العمليات الحسابية للأفراد والمؤسسات.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-500 mb-6">
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Python</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Streamlit</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Banking Tool</span>
-                        </div>
-                    </div>
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                        <a href="https://ahmedrabei1581.github.io/#daily-interest-app" target="_blank"
-                            class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
-                            استعراض التطبيق <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
-                        <a href="https://github.com/ahmedrabei1581" target="_blank"
-                            class="text-slate-500 hover:text-slate-900 text-lg">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
                 <!-- App Card 1: WealthPulse Simulator -->
-                <div
-                    class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
-                            <div
-                                class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-2xl font-bold">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-2xl font-bold">
                                 <i class="fa-solid fa-calculator"></i>
                             </div>
-                            <span
-                                class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Live
-                                Streamlit</span>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Live Streamlit</span>
                         </div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">WealthPulse Simulator</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            تطبيق تفاعلي لحساب وسيموليشن العوائد المصرفية، الفوائد المركبة، وعوائد الودائع والشهادات
-                            بدقة عالية.
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6" data-en="Advanced interactive application simulating banking returns, compound interest, and deposit yields with high precision." data-ar="تطبيق تفاعلي متقدم لمحاكاة العوائد المصرفية، الفوائد المركبة، وعوائد الودائع بدقة عالية.">
+                            Advanced interactive application simulating banking returns, compound interest, and deposit yields with high precision.
                         </p>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-500 mb-6">
                             <span class="bg-slate-100 px-2.5 py-1 rounded">Python</span>
@@ -244,48 +181,39 @@
                         </div>
                     </div>
                     <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank"
-                            class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
-                            تجربة التطبيق <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
+                            <span data-en="Try Live App" data-ar="تجربة التطبيق">Try Live App</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                         </a>
-                        <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank"
-                            class="text-slate-500 hover:text-slate-900 text-lg">
+                        <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank" class="text-slate-500 hover:text-slate-900 text-lg">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- App Card 2: Loan Approval Predictor -->
-                <div
-                    class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
-                            <div
-                                class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold">
+                            <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold">
                                 <i class="fa-solid fa-user-check"></i>
                             </div>
-                            <span
-                                class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Live
-                                ML App</span>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Live ML App</span>
                         </div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Loan Approval Prediction</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            نموذج تعلم آلي لحساب وتقييم احتمالية موافقة القروض بناءً على بيانات العميل والتاريخ
-                            الائتماني.
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6" data-en="Machine learning model assessing loan eligibility and credit risk based on customer behavioral data." data-ar="نموذج تعلم آلي لتقييم أهلية القروض ومخاطر الائتمان بناءً على بيانات العملاء.">
+                            Machine learning model assessing loan eligibility and credit risk based on customer behavioral data.
                         </p>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-500 mb-6">
                             <span class="bg-slate-100 px-2.5 py-1 rounded">Scikit-Learn</span>
                             <span class="bg-slate-100 px-2.5 py-1 rounded">Streamlit</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Credit Risk</span>
+                            <span class="bg-slate-100 px-2.5 py-1 rounded">Credit Risk AI</span>
                         </div>
                     </div>
                     <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                        <a href="https://github.com/ahmedrabei1581/predict-loan-approval-APP" target="_blank"
-                            class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
-                            عرض المشروع <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        <a href="https://github.com/ahmedrabei1581/predict-loan-approval-APP" target="_blank" class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
+                            <span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                         </a>
-                        <a href="https://github.com/ahmedrabei1581/predict-loan-approval-APP" target="_blank"
-                            class="text-slate-500 hover:text-slate-900 text-lg">
+                        <a href="https://github.com/ahmedrabei1581/predict-loan-approval-APP" target="_blank" class="text-slate-500 hover:text-slate-900 text-lg">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
@@ -299,47 +227,65 @@
     <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 mb-12">
             <div class="md:col-span-6">
-                <h3 class="text-2xl font-bold text-white mb-4">Eng. Ahmed Rabei</h3>
-                <p class="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
-                    مستشار مصرفي وخبير علوم البيانات والذكاء الاصطناعي. مساعدة المؤسسات والأفراد في التحول الرقمي وإدارة
-                    المخاطر وبناء النماذج المالية الذكية.
+                <h3 class="text-2xl font-bold text-white mb-2" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</h3>
+                <p class="text-amber-400 text-sm font-semibold mb-4" data-en="AI & Banking Advisory Consultant" data-ar="استشاري الاستشارات المصرفية والذكاء الاصطناعي">AI & Banking Advisory Consultant</p>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-md mb-6" data-en="Empowering financial institutions and individuals with digital transformation, risk mitigation, and intelligent AI models." data-ar="تمكين المؤسسات المالية والأفراد بالتحول الرقمي، تخفيف المخاطر، ونماذج الذكاء الاصطناعي الذكية.">
+                    Empowering financial institutions and individuals with digital transformation, risk mitigation, and intelligent AI models.
                 </p>
                 <div class="flex gap-4 text-xl">
-                    <a href="https://github.com/ahmedrabei1581" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-600 transition">
+                    <a href="https://github.com/ahmedrabei1581" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-600 transition">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.youtube.com/@ahmedrabei1581" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-red-600 transition">
+                    <a href="https://www.youtube.com/@ahmedrabei1581" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-red-600 transition">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="https://ahmedrabei1581.github.io/" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-amber-500 transition">
+                    <a href="https://ahmedrabei1581.github.io/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-amber-500 transition">
                         <i class="fa-solid fa-globe"></i>
                     </a>
                 </div>
             </div>
             <div class="md:col-span-6">
-                <h4 class="text-lg font-bold text-white mb-4">حجز استشارة أو تواصل مباشر</h4>
-                <p class="text-xs text-slate-400 mb-4">يمكنك رفع كافة استفساراتك أو إرسال طلب استشارة مباشرة:</p>
+                <h4 class="text-lg font-bold text-white mb-4" data-en="Book a Consultation" data-ar="حجز استشارة مباشرة">Book a Consultation</h4>
+                <p class="text-xs text-slate-400 mb-4" data-en="Send your inquiries or request custom AI banking advisory:" data-ar="أرسل استفساراتك أو اطلب استشارة مصرفية ذكية مخصصة:">Send your inquiries or request custom AI banking advisory:</p>
                 <form class="space-y-3" action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                    <input type="text" placeholder="الاسم الكريم"
-                        class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <input type="email" placeholder="البريد الإلكتروني"
-                        class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <textarea placeholder="تفاصيل الاستشارة المطلوب تقديمها..." rows="3"
-                        class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
-                    <button type="submit"
-                        class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition">إرسال
-                        الرسالة</button>
+                    <input type="text" placeholder="Full Name / الاسم الكريم" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                    <input type="email" placeholder="Email Address / البريد الإلكتروني" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                    <textarea placeholder="Consultation Details / تفاصيل الاستشارة..." rows="3" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
                 </form>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 text-center text-xs text-slate-600">
-            © 2026 Eng. Ahmed Rabei. جميع الحقوق محفوظة.
+            © 2026 Eng. Ahmed Rabie. All rights reserved.
         </div>
     </footer>
 
-</body>
+    <!-- JavaScript for Language Switching -->
+    <script>
+        let currentLang = 'en';
+        function toggleLanguage() {
+            const htmlRoot = document.getElementById('html-root');
+            const langBtn = document.getElementById('lang-btn');
+            const elements = document.querySelectorAll('[data-en]');
 
+            if (currentLang === 'en') {
+                currentLang = 'ar';
+                htmlRoot.setAttribute('lang', 'ar');
+                htmlRoot.setAttribute('dir', 'rtl');
+                langBtn.innerHTML = 'English 🇬🇧';
+                elements.forEach(el => {
+                    if(el.dataset.ar) el.innerHTML = el.dataset.ar;
+                });
+            } else {
+                currentLang = 'en';
+                htmlRoot.setAttribute('lang', 'en');
+                htmlRoot.setAttribute('dir', 'ltr');
+                langBtn.innerHTML = 'العربية 🇸🇦';
+                elements.forEach(el => {
+                    if(el.dataset.en) el.innerHTML = el.dataset.en;
+                });
+            }
+        }
+    </script>
+</body>
 </html>
