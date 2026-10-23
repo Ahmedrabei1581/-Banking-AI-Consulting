@@ -34,9 +34,11 @@
                 </div>
             </div>
 
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600 text-sm">
                 <a href="#about" class="hover:text-blue-900 transition" data-en="About" data-ar="عن الخبير">About</a>
-                <a href="#ai-advisory" class="hover:text-blue-900 transition" data-en="AI Advisory" data-ar="الاستشارات الذكية">AI Advisory</a>
+                <a href="#wealthpulse-section" class="text-blue-700 font-bold hover:text-blue-900 transition flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200 shadow-sm">
+                    <i class="fa-solid fa-calculator text-amber-500"></i> WealthPulse
+                </a>
                 <a href="#apps" class="hover:text-blue-900 transition" data-en="AI & Financial Apps" data-ar="التطبيقات الذكية">AI & Financial Apps</a>
                 <!-- Language Switcher Button -->
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-300 transition">
@@ -66,8 +68,8 @@
                     Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and AI automation to empower financial institutions.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#apps" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
-                        <i class="fa-solid fa-rocket"></i> <span data-en="Explore AI Solutions" data-ar="استكشف الحلول الذكية">Explore AI Solutions</span>
+                    <a href="#wealthpulse-section" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-rocket"></i> <span data-en="Launch WealthPulse Live" data-ar="تجربة WealthPulse الحية">Launch WealthPulse Live</span>
                     </a>
                     <a href="#contact" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-xl transition" data-en="Contact Expert" data-ar="تواصل مع الخبير">
                         Contact Expert
@@ -111,7 +113,7 @@
         </div>
     </section>
 
-    <!-- About Section with Direct Personal Portfolio Link -->
+    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-6">
@@ -131,17 +133,6 @@
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs ms-1"></i>
                     </a>
                 </div>
-
-                <div class="grid grid-cols-2 gap-4 pt-2">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <span class="block text-2xl font-bold text-blue-900 mb-1">20+ Years</span>
-                        <span class="text-xs text-slate-500" data-en="Banking Operations & Risk" data-ar="العمليات المصرفية وإدارة المخاطر">Banking Operations & Risk</span>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <span class="block text-2xl font-bold text-amber-600 mb-1">AI & Data</span>
-                        <span class="text-xs text-slate-500" data-en="Machine Learning & Automation" data-ar="التعلم الآلي والأتمتة">Machine Learning & Automation</span>
-                    </div>
-                </div>
             </div>
             <div class="md:col-span-6 bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl"></div>
@@ -159,48 +150,70 @@
         </div>
     </section>
 
-    <!-- AI & Financial Apps Showcase -->
-    <section id="apps" class="py-20 bg-slate-100">
+    <!-- WealthPulse Simulator Live Interactive Section (Replaces previous card) -->
+    <section id="wealthpulse-section" class="py-20 bg-slate-100 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Streamlit & AI Live Demos" data-ar="تطبيقات تفاعلية ونماذج ذكاء اصطناعي">Streamlit & AI Live Demos</span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-4" data-en="Interactive AI & Financial Applications" data-ar="تطبيقات الذكاء الاصطناعي والحلول المالية">Interactive AI & Financial Applications</h2>
-                <p class="text-slate-600" data-en="Deployed algorithmic tools delivering accurate financial simulations, credit scoring, and predictive analysis." data-ar="أدوات خوارزمية تم نشرها لتقديم محاكاة مالية دقيقة، وتقييم ائتماني، وتحليل تنبؤي.">Deployed algorithmic tools delivering accurate financial simulations, credit scoring, and predictive analysis.</p>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Live Streamlit Interactive Tool" data-ar="أداة تفاعلية حية">Live Streamlit Interactive Tool</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4" data-en="WealthPulse: Advanced Banking Return & Yield Simulator" data-ar="محاكي العوائد والودائع المصرفية المتقدم WealthPulse">WealthPulse: Advanced Banking Return & Yield Simulator</h2>
+                <p class="text-slate-600 text-base" data-en="Interact with the live simulator below, compute compound interest, deposit yields, and export financial output reports instantly." data-ar="تفاعل مع المحاكي الحي أدناه، احسب الفوائد المركبة وعوائد الودائع، وقم بتحميل تقارير المخرجات المالية فوراً.">
+                    Interact with the live simulator below, compute compound interest, deposit yields, and export financial output reports instantly.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <!-- App Card 1: WealthPulse Simulator -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-2xl font-bold">
-                                <i class="fa-solid fa-calculator"></i>
-                            </div>
-                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Live Streamlit</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">WealthPulse Simulator</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6" data-en="Advanced interactive application simulating banking returns, compound interest, and deposit yields with high precision." data-ar="تطبيق تفاعلي متقدم لمحاكاة العوائد المصرفية، الفوائد المركبة، وعوائد الودائع بدقة عالية.">
-                            Advanced interactive application simulating banking returns, compound interest, and deposit yields with high precision.
-                        </p>
-                        <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-500 mb-6">
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Python</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Streamlit</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Financial Modeling</span>
-                        </div>
+            <!-- Interactive Container Frame -->
+            <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden mb-8">
+                <!-- Frame Header Bar -->
+                <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                        <span class="text-sm font-semibold ms-2 text-slate-300">WealthPulse-Simulator.streamlit.app</span>
                     </div>
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
-                            <span data-en="Try Live App" data-ar="تجربة التطبيق">Try Live App</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
-                        <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank" class="text-slate-500 hover:text-slate-900 text-lg">
-                            <i class="fa-brands fa-github"></i>
+                    <div class="flex items-center gap-3">
+                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-en="Open Fullscreen" data-ar="فتح في نافذة كاملة">Open Fullscreen</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- App Card 2: Loan Approval Predictor -->
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <!-- Embedded Live App iFrame -->
+                <div class="w-full h-[750px] bg-slate-50 relative">
+                    <iframe src="https://wealthpulse-simulator.streamlit.app/?embedded=true" class="w-full h-full border-0" title="WealthPulse Simulator"></iframe>
+                </div>
+            </div>
+
+            <!-- Action Toolbar (Direct Visit & Report Downloads) -->
+            <div class="bg-gradient-to-r from-blue-950 to-slate-900 text-white p-8 rounded-2xl shadow-lg flex flex-wrap justify-between items-center gap-6">
+                <div>
+                    <h3 class="text-xl font-bold mb-1" data-en="Need custom financial models or report exports?" data-ar="هل تحتاج نماذج مالية مخصصة أو تقارير مصدّرة؟">Need custom financial models or report exports?</h3>
+                    <p class="text-slate-300 text-xs md:text-sm" data-en="You can run simulations, analyze yields, and download structured analytical outputs." data-ar="يمكنك تشغيل المحاكاة، تحليل العوائد، وتحميل المخرجات التحليلية المهيكلة مباشرة.">You can run simulations, analyze yields, and download structured analytical outputs.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow flex items-center gap-2">
+                        <i class="fa-solid fa-globe"></i> <span data-en="Visit App Directly" data-ar="زيارة التطبيق مباشرة">Visit App Directly</span>
+                    </a>
+                    <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition border border-slate-700 flex items-center gap-2">
+                        <i class="fa-brands fa-github"></i> <span data-en="GitHub Repository" data-ar="مستودع الكود GitHub">GitHub Repository</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other AI & Financial Apps Showcase -->
+    <section id="apps" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="More ML & AI Demos" data-ar="نماذج ذكاء اصطناعي أخرى">More ML & AI Demos</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-4" data-en="Other Deployed AI Applications" data-ar="تطبيقات أخرى للذكاء الاصطناعي">Other Deployed AI Applications</h2>
+                <p class="text-slate-600" data-en="Machine learning algorithms designed for credit assessment and predictive risk evaluation." data-ar="خوارزميات تعلم آلي مصممة للتقييم الائتماني وتقييم المخاطر التنبؤية.">Machine learning algorithms designed for credit assessment and predictive risk evaluation.</p>
+            </div>
+
+            <div class="grid md:grid-cols-1 gap-8 max-w-xl mx-auto">
+                <!-- App Card: Loan Approval Predictor -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
                             <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold">
@@ -213,12 +226,12 @@
                             Machine learning model assessing loan eligibility and credit risk based on customer behavioral data.
                         </p>
                         <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-500 mb-6">
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Scikit-Learn</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Streamlit</span>
-                            <span class="bg-slate-100 px-2.5 py-1 rounded">Credit Risk AI</span>
+                            <span class="bg-white px-2.5 py-1 rounded border border-slate-200">Scikit-Learn</span>
+                            <span class="bg-white px-2.5 py-1 rounded border border-slate-200">Streamlit</span>
+                            <span class="bg-white px-2.5 py-1 rounded border border-slate-200">Credit Risk AI</span>
                         </div>
                     </div>
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+                    <div class="px-6 py-4 bg-white border-t border-slate-200 flex items-center justify-between">
                         <a href="https://github.com/ahmedrabei1581/predict-loan-approval-APP" target="_blank" class="text-blue-900 font-bold text-sm hover:underline flex items-center gap-1">
                             <span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                         </a>
@@ -227,7 +240,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
