@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eng. Ahmed Rabie | AI-Driven Banking & Financial Advisory</title>
+    <title>AFBC | Eng. Ahmed Rabie - AI Financial & Banking Consulting</title>
+    
+    <!-- Primary Meta Tags & Open Graph for Professional Sharing -->
+    <meta name="title" content="AFBC | Eng. Ahmed Rabie - AI Financial & Banking Consulting">
+    <meta name="description" content="Empowering financial institutions with AI-driven banking advisory, Streamlit applications, risk analytics, and workflow automation.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AFBC | Eng. Ahmed Rabie - AI Financial & Banking Consulting">
+    <meta property="og:description" content="20+ years of banking expertise merged with Data Science & AI Engineering. Explore live financial simulators and advisory services.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='65' font-size='50' font-weight='bold' fill='%23fbbf24' text-anchor='middle'>AFBC</text></svg>">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts (Inter & Cairo) -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Inter', 'Cairo', sans-serif; }
         .glass-card {
@@ -25,21 +37,22 @@
     <header class="sticky top-0 z-50 glass-card shadow-sm border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                <div class="w-10 h-10 bg-blue-950 text-amber-400 rounded-xl flex items-center justify-center font-bold text-xl shadow">
-                    AR
+                <div class="w-12 h-10 bg-blue-950 text-amber-400 rounded-xl flex items-center justify-center font-extrabold text-lg shadow border border-amber-400/20">
+                    AFBC
                 </div>
                 <div>
                     <h1 class="text-lg font-bold text-slate-900 leading-none" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</h1>
-                    <span class="text-xs text-slate-500" data-en="AI & Banking Advisory" data-ar="استشارات المصرفية والذكاء الاصطناعي">AI & Banking Advisory</span>
+                    <span class="text-xs text-slate-500" data-en="AI Financial & Banking Consulting (AFBC)" data-ar="استشارات المصرفية والمالية بالذكاء الاصطناعي (AFBC)">AI Financial & Banking Consulting (AFBC)</span>
                 </div>
             </div>
 
             <nav class="hidden md:flex items-center gap-6 font-semibold text-slate-600 text-sm">
-                <a href="#about" class="hover:text-blue-900 transition" data-en="About" data-ar="عن الخبير">About</a>
+                <a href="#about" class="hover:text-blue-900 transition" data-en="About AFBC" data-ar="عن AFBC">About AFBC</a>
+                <a href="#who-we-serve" class="hover:text-blue-900 transition" data-en="Who We Serve" data-ar="القطاعات المستهدفة">Who We Serve</a>
                 <a href="#wealthpulse-section" class="text-blue-700 font-bold hover:text-blue-900 transition flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200 shadow-sm">
                     <i class="fa-solid fa-calculator text-amber-500"></i> WealthPulse
                 </a>
-                <a href="#apps" class="hover:text-blue-900 transition" data-en="AI & Financial Apps" data-ar="التطبيقات الذكية">AI & Financial Apps</a>
+                <a href="#apps" class="hover:text-blue-900 transition" data-en="AI Apps" data-ar="التطبيقات الذكية">AI Apps</a>
                 <!-- Language Switcher Button -->
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-300 transition">
                     العربية 🇸🇦
@@ -56,23 +69,26 @@
             <div class="md:col-span-7 text-start rtl:text-right">
                 <div class="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700/50 text-amber-300 text-xs px-4 py-1.5 rounded-full mb-6">
                     <i class="fa-solid fa-brain"></i>
-                    <span data-en="Next-Gen Banking Advisory Powered by Artificial Intelligence" data-ar="استشارات مصرفية من الجيل القادم مدعومة بالذكاء الاصطناعي">Next-Gen Banking Advisory Powered by Artificial Intelligence</span>
+                    <span data-en="AFBC - AI Financial & Banking Consulting Platform" data-ar="منصة AFBC للاستشارات المالية والمصرفية بالذكاء الاصطناعي">AFBC - AI Financial & Banking Consulting Platform</span>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-2" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">
                     Eng. Ahmed Rabie
                 </h1>
-                <p class="text-xl md:text-2xl text-amber-400 font-semibold mb-6" data-en="Transforming Banking Operations & Risk with Cutting-Edge AI Solutions" data-ar="تحويل العمليات المصرفية وإدارة المخاطر بأحدث حلول الذكاء الاصطناعي">
-                    Transforming Banking Operations & Risk with Cutting-Edge AI Solutions
+                <p class="text-lg md:text-xl text-amber-300 font-medium mb-4" data-en="Founder of AFBC | Data Scientist & AI Engineer" data-ar="مؤسس AFBC | خبير علوم البيانات وهندسة الذكاء الاصطناعي">
+                    Founder of AFBC | Data Scientist & AI Engineer
                 </p>
-                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed" data-en="Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and AI automation to empower financial institutions." data-ar="نربط بين أكثر من 20 عاماً من الخبرة المصرفية العميقة وبين علوم البيانات المتقدمة، التعلم الآلي، وأتمتة الذكاء الاصطناعي لتمكين المؤسسات المالية.">
-                    Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and AI automation to empower financial institutions.
+                <p class="text-xl md:text-2xl text-amber-400 font-semibold mb-6" data-en="Transforming Banking Operations with AI Solutions & Predictive Analytics" data-ar="تحويل العمليات المصرفية بحلول الذكاء الاصطناعي والتحليل التنبؤي">
+                    Transforming Banking Operations with AI Solutions & Predictive Analytics
+                </p>
+                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed" data-en="Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and custom financial application development to drive optimal decision-making." data-ar="نربط بين أكثر من 20 عاماً من الخبرة المصرفية العميقة وبين علوم البيانات، التعلم الآلي، وتطوير التطبيقات المالية المخصصة لمساعدة المؤسسات على اتخاذ القرارات المالية المباشرة والصحيحة.">
+                    Bridging 20+ years of deep banking expertise with advanced Data Science, Machine Learning, and custom financial application development to drive optimal decision-making.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#wealthpulse-section" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
                         <i class="fa-solid fa-rocket"></i> <span data-en="Launch WealthPulse Live" data-ar="تجربة WealthPulse الحية">Launch WealthPulse Live</span>
                     </a>
-                    <a href="#contact" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-xl transition" data-en="Contact Expert" data-ar="تواصل مع الخبير">
-                        Contact Expert
+                    <a href="#contact" class="border border-slate-600 hover:border-slate-400 text-white font-semibold px-7 py-3.5 rounded-xl transition" data-en="Contact AFBC Expert" data-ar="تواصل مع خبير AFBC">
+                        Contact AFBC Expert
                     </a>
                 </div>
             </div>
@@ -81,30 +97,30 @@
                 <div class="relative w-full max-w-md bg-gradient-to-tr from-blue-900/40 to-slate-800/40 border border-slate-700/60 p-8 rounded-3xl backdrop-blur-md shadow-2xl">
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-microchip"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-xl font-bold">
+                                AFBC
                             </div>
                             <div>
-                                <h3 class="font-bold text-white" data-en="AI & Machine Learning" data-ar="الذكاء الاصطناعي والتعلم الآلي">AI & Machine Learning</h3>
-                                <p class="text-xs text-slate-400" data-en="Predictive models for banking credit & risk" data-ar="نماذج تنبؤية للائتمان والمخاطر المصرفية">Predictive models for banking credit & risk</p>
+                                <h3 class="font-bold text-white" data-en="Banking & Risk Advisory" data-ar="الاستشارات المصرفية والمخاطر">Banking & Risk Advisory</h3>
+                                <p class="text-xs text-slate-400" data-en="Governance, credit risk evaluation, and compliance" data-ar="الحوكمة، تقييم مخاطر الائتمان، والالتزام التنظيمي">Governance, credit risk evaluation, and compliance</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-chart-pie"></i>
+                                <i class="fa-solid fa-laptop-code"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-white" data-en="Smart Financial Analytics" data-ar="التحليل المالي الذكي">Smart Financial Analytics</h3>
-                                <p class="text-xs text-slate-400" data-en="Automated yield & interest simulations" data-ar="محاكاة العوائد والفوائد الآلية">Automated yield & interest simulations</p>
+                                <h3 class="font-bold text-white" data-en="End-to-End App Development" data-ar="تطوير البرمجيات والأنظمة الكاملة">End-to-End App Development</h3>
+                                <p class="text-xs text-slate-400" data-en="Custom banking platforms & Streamlit solutions" data-ar="منصات مصرفية مخصصة وتطبيقات تفاعلية">Custom banking platforms & Streamlit solutions</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
-                                <i class="fa-solid fa-network-wired"></i>
+                                <i class="fa-solid fa-chart-pie"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-white" data-en="Workflow Automation" data-ar="أتمتة سير العمل">Workflow Automation</h3>
-                                <p class="text-xs text-slate-400" data-en="n8n & API integrations for efficiency" data-ar="حلول n8n وربط الأنظمة لرفع الكفاءة">n8n & API integrations for efficiency</p>
+                                <h3 class="font-bold text-white" data-en="Predictive Financial Analytics" data-ar="التحليلات المالية التنبؤية">Predictive Financial Analytics</h3>
+                                <p class="text-xs text-slate-400" data-en="Machine learning pipelines for yields and portfolio strategy" data-ar="خطوط أتمتة وتعلم آلي للعوائد وإستراتيجيات المحافظ">Machine learning pipelines for yields and portfolio strategy</p>
                             </div>
                         </div>
                     </div>
@@ -113,20 +129,45 @@
         </div>
     </section>
 
-    <!-- About Section with Direct Portfolio Link -->
+    <!-- Enhanced About Us Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-6">
-                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="About the Expert" data-ar="عن الخبير">About the Expert</span>
-                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-6" data-en="Merging 20+ Years of Banking Mastery with AI Innovation" data-ar="دمج أكثر من 20 عاماً من الخبرة المصرفية مع ابتكارات الذكاء الاصطناعي">Merging 20+ Years of Banking Mastery with AI Innovation</h2>
-                <p class="text-slate-600 leading-relaxed mb-4" data-en="Eng. Ahmed Rabie brings over 20 years of extensive experience in banking operations, risk management, and regulatory compliance. Recognizing the digital evolution, he integrated advanced Data Science and AI to pioneer smart financial tooling." data-ar="يجلب المهندس أحمد ربيع خبرة تزيد عن 20 عاماً في العمليات المصرفية، إدارة المخاطر، والالتزام التنظيمي. وإدراكاً منه للتحول الرقمي، قام بدمج علوم البيانات المتقدمة والذكاء الاصطناعي لابتكار أدوات مالية ذكية.">
-                    Eng. Ahmed Rabie brings over 20 years of extensive experience in banking operations, risk management, and regulatory compliance. Recognizing the digital evolution, he integrated advanced Data Science and AI to pioneer smart financial tooling.
+            <div class="md:col-span-7">
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="About AFBC & Capabilities" data-ar="عن منصة AFBC والخدمات التقنية">About AFBC & Capabilities</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-3 mb-6" data-en="AI Financial & Banking Consulting (AFBC)" data-ar="الاستشارات المالية والمصرفية بالذكاء الاصطناعي (AFBC)">AI Financial & Banking Consulting (AFBC)</h2>
+                
+                <p class="text-slate-600 leading-relaxed mb-4" data-en="Eng. Ahmed Rabie, founder of AFBC, brings a unique hybrid expertise combining over 20 years of hands-on leadership in banking operations, risk management, and regulatory compliance with advanced qualifications in Data Science and AI Engineering." data-ar="يمتلك المهندس أحمد ربيع، مؤسس منصة AFBC، خبرة استثنائية تجمع بين أكثر من 20 عاماً من القيادة العملية في العمليات المصرفية، إدارة المخاطر، والالتزام التنظيمي، بجانب تخصص متقدم في علوم البيانات وهندسة الذكاء الاصطناعي (Data Science & AI Engineering).">
+                    Eng. Ahmed Rabie, founder of AFBC, brings a unique hybrid expertise combining over 20 years of hands-on leadership in banking operations, risk management, and regulatory compliance with advanced qualifications in Data Science and AI Engineering.
                 </p>
-                <p class="text-slate-600 leading-relaxed mb-6" data-en="To explore my full career journey, ideas, certifications, projects, and future vision for integrating AI into banking operations, feel free to visit my comprehensive personal profile at <a href='https://ahmedrabei1581.github.io/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>ahmedrabei1581.github.io</a>." data-ar="لاستكشاف مسيرتي المهنية الكاملة، وأفكاري، ومشروعاتي، وشهاداتي، ورؤيتي المستقبلية لتطوير العمليات المصرفية باستخدام الذكاء الاصطناعي، يمكنك زيارة موقعي الشخصي الشامل عبر الرابط: <a href='https://ahmedrabei1581.github.io/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>ahmedrabei1581.github.io</a>.">
+                
+                <p class="text-slate-600 leading-relaxed mb-6" data-en="At AFBC, we do not only offer strategic advisory; we design and build end-to-end applications, complete financial systems, data workflows, and custom algorithmic platforms. These solutions are specifically engineered to evaluate complex risk profiles, optimize portfolios, and assist institutions in making accurate, data-driven decisions." data-ar="في AFBC، نحن لا نقدم مجرد استشارات إستراتيجية فقط؛ بل نقوم بتصميم وبناء **التطبيقات والأنظمة المصرفية الكاملة (End-to-End Applications)**، وحلول أتمتة البيانات، والمنصات الخوارزمية المصممة خصيصاً لتقييم المخاطر وتوجيه المؤسسات والأفراد نحو اتخاذ القرارات المالية والمصرفية الصحيحة والسريعة.">
+                    At AFBC, we do not only offer strategic advisory; we design and build end-to-end applications, complete financial systems, data workflows, and custom algorithmic platforms. These solutions are specifically engineered to evaluate complex risk profiles, optimize portfolios, and assist institutions in making accurate, data-driven decisions.
+                </p>
+
+                <!-- Core Capability Cards -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex items-center gap-2 font-bold text-slate-900 text-sm mb-1">
+                            <i class="fa-solid fa-code text-blue-900"></i>
+                            <span data-en="System & App Engineering" data-ar="تطوير الأنظمة والتطبيقات">System & App Engineering</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed" data-en="Custom web platforms, Streamlit deployments, and financial computing tools." data-ar="تطوير المنصات وتطبيقات Streamlit والأدوات الحسابية المالية المخصصة.">Custom web platforms, Streamlit deployments, and financial computing tools.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="flex items-center gap-2 font-bold text-slate-900 text-sm mb-1">
+                            <i class="fa-solid fa-chart-line text-amber-600"></i>
+                            <span data-en="Risk Analytics & Modeling" data-ar="تحليل ونمذجة المخاطر">Risk Analytics & Modeling</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed" data-en="Predictive modeling for credit risk, deposit yield analysis, and automated reports." data-ar="نمذجة تنبؤية لمخاطر الائتمان، تحليل عوائد الودائع، واستخراج التقارير الآلية.">Predictive modeling for credit risk, deposit yield analysis, and automated reports.</p>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 text-sm leading-relaxed mb-6" data-en="To explore my full career journey, ideas, certifications, projects, and future vision for integrating AI into banking operations, feel free to visit my comprehensive personal profile at <a href='https://ahmedrabei1581.github.io/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>ahmedrabei1581.github.io</a>." data-ar="لاستكشاف مسيرتي المهنية الكاملة، وأفكاري، ومشروعاتي، وشهاداتي، ورؤيتي المستقبلية لتطوير العمليات المصرفية باستخدام الذكاء الاصطناعي، يمكنك زيارة موقعي الشخصي الشامل عبر الرابط: <a href='https://ahmedrabei1581.github.io/' target='_blank' class='text-blue-600 font-bold underline hover:text-blue-800'>ahmedrabei1581.github.io</a>.">
                     To explore my full career journey, ideas, certifications, projects, and future vision for integrating AI into banking operations, feel free to visit my comprehensive personal profile at <a href="https://ahmedrabei1581.github.io/" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">ahmedrabei1581.github.io</a>.
                 </p>
                 
-                <div class="mb-6">
+                <div>
                     <a href="https://ahmedrabei1581.github.io/" target="_blank" class="inline-flex items-center gap-2 bg-blue-900 text-white font-semibold text-sm px-5 py-3 rounded-xl hover:bg-blue-800 transition shadow">
                         <i class="fa-solid fa-user-gear"></i>
                         <span data-en="Visit Personal Portfolio & Vision" data-ar="زيارة الملف الشخصي والرؤية المستقبلية">Visit Personal Portfolio & Vision</span>
@@ -134,24 +175,70 @@
                     </a>
                 </div>
             </div>
-            <div class="md:col-span-6 bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
+
+            <div class="md:col-span-5 bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
                 <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/20 rounded-full blur-2xl"></div>
                 <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-amber-400"></i> <span data-en="Advisory Philosophy" data-ar="الفلسفة الاستشارية">Advisory Philosophy</span>
+                    <i class="fa-solid fa-lightbulb text-amber-400"></i> <span data-en="AFBC Engineering Philosophy" data-ar="فلسفة AFBC لتطوير الأنظمة المالية">AFBC Engineering Philosophy</span>
                 </h3>
-                <p class="text-slate-300 text-sm leading-relaxed mb-6" data-en="&quot;Combining rigorous banking governance with state-of-the-art predictive AI models creates unmatched security, precision, and efficiency for modern financial institutions.&quot;" data-ar="&quot;إن دمج الحوكمة المصرفية الصارمة مع أحدث نماذج الذكاء الاصطناعي التنبؤية يحقق أماناً ودقة وكفاءة لا مثيل لها للمؤسسات المالية الحديثة.&quot;">
-                    "Combining rigorous banking governance with state-of-the-art predictive AI models creates unmatched security, precision, and efficiency for modern financial institutions."
+                <p class="text-slate-300 text-sm leading-relaxed mb-6" data-en="&quot;True innovation in finance happens when banking compliance and risk governance are coupled with custom-built ML algorithms, predictive models, and robust financial software execution.&quot;" data-ar="&quot;الابتكار الحقيقي في القطاع المالي يحدث عندما تندمج الحوكمة والمخاطر المصرفية مع نماذج تعلم آلي وتطبيقات برمجية مخصصة لأتمتة القرارات بفاعلية ودقة.&quot;">
+                    "True innovation in finance happens when banking compliance and risk governance are coupled with custom-built ML algorithms, predictive models, and robust financial software execution."
                 </p>
                 <div class="border-t border-slate-800 pt-4 flex items-center justify-between text-xs text-slate-400">
                     <span data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</span>
-                    <span class="text-amber-400" data-en="Senior Banking & AI Consultant" data-ar="استشاري أول المصرفية والذكاء الاصطناعي">Senior Banking & AI Consultant</span>
+                    <span class="text-amber-400" data-en="Data Scientist & AI Engineer" data-ar="خبير علوم البيانات وهندسة الذكاء الاصطناعي">Data Scientist & AI Engineer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Who We Serve (Target Audiences) -->
+    <section id="who-we-serve" class="py-16 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Tailored Value Proposition" data-ar="القيمة المضافة للقطاعات">Tailored Value Proposition</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2" data-en="Who We Serve" data-ar="القطاعات والشرائح المستهدفة">Who We Serve</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2" data-en="Banks & Financial Institutions" data-ar="البنوك والمؤسسات المالية">Banks & Financial Institutions</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="Automate operational workflows, integrate predictive credit scoring models, and maintain strict regulatory compliance." data-ar="أتمتة سير العمل التشغيلي، بناء وتطبيق نماذج تقييم الائتمان التنبؤية، وضمان الالتزام بمعايير الحوكمة.">
+                        Automate operational workflows, integrate predictive credit scoring models, and maintain strict regulatory compliance.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2" data-en="Corporations & Enterprises" data-ar="الشركات والمؤسسات الاستثمارية">Corporations & Enterprises</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="Optimize liquidity management, structure corporate time deposits, and forecast portfolio yield dynamics." data-ar="تحسين إدارة السيولة النقدية، هيكلة الودائع البنكية والشهادات للشركات، والتنبؤ بديناميكيات عوائد المحافظ.">
+                        Optimize liquidity management, structure corporate time deposits, and forecast portfolio yield dynamics.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2" data-en="Investors & Wealth Clients" data-ar="المستثمرون وكبار العملاء">Investors & Wealth Clients</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="Simulate compounding returns, compute exact certificate yields, and download official PDF/Excel statements." data-ar="محاكاة الفوائد التراكمية، حساب عوائد الشهادات والودائع بدقة، واستخراج تقارير كشوفات مالية موثقة.">
+                        Simulate compounding returns, compute exact certificate yields, and download official PDF/Excel statements.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- WealthPulse Simulator Live Interactive Section -->
-    <section id="wealthpulse-section" class="py-20 bg-slate-100 border-t border-slate-200">
+    <section id="wealthpulse-section" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Live Streamlit Interactive Tool" data-ar="أداة تفاعلية حية">Live Streamlit Interactive Tool</span>
@@ -244,40 +331,63 @@
         </div>
     </section>
 
-    <!-- Contact & Footer Section -->
+    <!-- Contact & Footer Section with Smart Category Form -->
     <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 mb-12">
             <div class="md:col-span-6">
-                <h3 class="text-2xl font-bold text-white mb-2" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</h3>
-                <p class="text-amber-400 text-sm font-semibold mb-4" data-en="AI & Banking Advisory Consultant" data-ar="استشاري الاستشارات المصرفية والذكاء الاصطناعي">AI & Banking Advisory Consultant</p>
-                <p class="text-slate-400 text-sm leading-relaxed max-w-md mb-6" data-en="Empowering financial institutions and individuals with digital transformation, risk mitigation, and intelligent AI models." data-ar="تمكين المؤسسات المالية والأفراد بالتحول الرقمي، تخفيف المخاطر، ونماذج الذكاء الاصطناعي الذكية.">
-                    Empowering financial institutions and individuals with digital transformation, risk mitigation, and intelligent AI models.
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-8 bg-blue-900 text-amber-400 rounded-lg flex items-center justify-center font-extrabold text-sm border border-amber-400/30">
+                        AFBC
+                    </div>
+                    <h3 class="text-2xl font-bold text-white" data-en="Eng. Ahmed Rabie" data-ar="م. أحمد ربيع">Eng. Ahmed Rabie</h3>
+                </div>
+                <p class="text-amber-400 text-sm font-semibold mb-4" data-en="AI Financial & Banking Consulting (AFBC)" data-ar="استشارات المصرفية والمالية بالذكاء الاصطناعي (AFBC)">AI Financial & Banking Consulting (AFBC)</p>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-md mb-6" data-en="Empowering financial institutions and individuals with digital transformation, risk mitigation, custom Streamlit financial tools, and AI analytics." data-ar="تمكين المؤسسات المالية والأفراد بالتحول الرقمي، تطوير الأنظمة المصرفية والحلول المالية الذكية وتخفيف المخاطر.">
+                    Empowering financial institutions and individuals with digital transformation, risk mitigation, custom Streamlit financial tools, and AI analytics.
                 </p>
+
+                <!-- Professional Social Media Links -->
                 <div class="flex gap-4 text-xl">
-                    <a href="https://github.com/ahmedrabei1581" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-600 transition">
+                    <a href="https://github.com/ahmedrabei1581" target="_blank" title="GitHub" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-600 transition">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://www.youtube.com/@ahmedrabei1581" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-red-600 transition">
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@ahmedrabei1581" target="_blank" title="YouTube" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-red-600 transition">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="https://ahmedrabei1581.github.io/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-amber-500 transition">
+                    <a href="https://ahmedrabei1581.github.io/" target="_blank" title="Personal Portfolio" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-amber-500 transition">
                         <i class="fa-solid fa-globe"></i>
                     </a>
                 </div>
             </div>
+
+            <!-- Smart Consultation Form -->
             <div class="md:col-span-6">
-                <h4 class="text-lg font-bold text-white mb-4" data-en="Book a Consultation" data-ar="حجز استشارة مباشرة">Book a Consultation</h4>
-                <p class="text-xs text-slate-400 mb-4" data-en="Send your inquiries or request custom AI banking advisory:" data-ar="أرسل استفساراتك أو اطلب استشارة مصرفية ذكية مخصصة:">Send your inquiries or request custom AI banking advisory:</p>
+                <h4 class="text-lg font-bold text-white mb-4" data-en="Book an AFBC Consultation or Request a Custom App" data-ar="حجز استشارة AFBC أو طلب تطوير نظام مخصص">Book an AFBC Consultation or Request a Custom App</h4>
+                <p class="text-xs text-slate-400 mb-4" data-en="Select your inquiry area to connect directly with Eng. Ahmed Rabie:" data-ar="حدد مجال الاستفسار للتواصل المباشر مع المهندس أحمد ربيع:">Select your inquiry area to connect directly with Eng. Ahmed Rabie:</p>
+                
                 <form class="space-y-3" action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                    <input type="text" placeholder="Full Name / الاسم الكريم" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <input type="email" placeholder="Email Address / البريد الإلكتروني" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <textarea placeholder="Consultation Details / تفاصيل الاستشارة..." rows="3" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                    <input type="text" placeholder="Full Name / الاسم الكريم" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500" required>
+                    <input type="email" placeholder="Email Address / البريد الإلكتروني" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500" required>
+                    
+                    <!-- Service Selector Dropdown -->
+                    <select class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-slate-300 focus:outline-none focus:border-blue-500">
+                        <option value="banking-advisory">Banking & Credit Risk Advisory / استشارة مصرفية وائتمانية</option>
+                        <option value="custom-app">Custom Streamlit App & Financial System / تطوير تطبيق أو نظام مالي مخصص</option>
+                        <option value="data-analytics">Data Science & Yield Predictive Modeling / علوم البيانات والتحليل التنبؤي</option>
+                        <option value="general">General Inquiry / استفسار عام</option>
+                    </select>
+
+                    <textarea placeholder="Project / Consultation Details / تفاصيل المشورة أو المشروع..." rows="3" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500" required></textarea>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-2.5 rounded-lg text-sm transition" data-en="Send Request" data-ar="إرسال الطلب">Send Request</button>
                 </form>
             </div>
         </div>
+        
         <div class="max-w-7xl mx-auto px-6 border-t border-slate-900 pt-8 text-center text-xs text-slate-600">
-            © 2026 Eng. Ahmed Rabie. All rights reserved.
+            © 2026 AFBC - Eng. Ahmed Rabie. All rights reserved.
         </div>
     </footer>
 
