@@ -50,7 +50,7 @@
                 <a href="#about" class="hover:text-blue-900 transition" data-en="About AFBC" data-ar="عن AFBC">About AFBC</a>
                 <a href="#who-we-serve" class="hover:text-blue-900 transition" data-en="Who We Serve" data-ar="القطاعات المستهدفة">Who We Serve</a>
                 <a href="#wealthpulse-section" class="text-blue-700 font-bold hover:text-blue-900 transition flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200 shadow-sm">
-                    <i class="fa-solid fa-calculator text-amber-500"></i> WealthPulse
+                    <i class="fa-solid fa-calculator text-amber-500"></i> <span data-en="WealthPulse" data-ar="محاكي WealthPulse">WealthPulse</span>
                 </a>
                 <a href="#apps" class="text-blue-700 font-bold hover:text-blue-900 transition flex items-center gap-1.5 bg-blue-50 px-3 py-1.5 rounded-lg border border-blue-200 shadow-sm" data-en="Credit Agent" data-ar="وكيل الائتمان">
                     <i class="fa-solid fa-shield-halved text-amber-500"></i> Credit Agent
@@ -321,7 +321,7 @@
 
                 <!-- Embedded Live App iFrame -->
                 <div style="width: 100%; min-height: 850px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    <iframe src="https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true" 
+                    <iframe src="https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true&lang=en" 
                             width="100%" 
                             height="850px" 
                             style="border: none;" 
@@ -448,7 +448,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Synchronized Language Switching -->
+    <!-- JavaScript for Synchronized Language Switching & Live App Language Sync -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
@@ -456,6 +456,7 @@
             const langBtn = document.getElementById('lang-btn');
             const elements = document.querySelectorAll('[data-en]');
             const appFrame = document.querySelector('iframe[title="WealthPulse Simulator"]');
+            const creditFrame = document.querySelector('iframe[title="Credit Risk Assessment Agent"]');
 
             if (currentLang === 'en') {
                 currentLang = 'ar';
@@ -465,9 +466,9 @@
                 elements.forEach(el => {
                     if(el.dataset.ar) el.innerHTML = el.dataset.ar;
                 });
-                if(appFrame) {
-                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=ar";
-                }
+                // تحديث روابط الـ iFrame لتعمل باللغة العربية داخل التطبيقين
+                if(appFrame) appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=ar";
+                if(creditFrame) creditFrame.src = "https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true&lang=ar";
             } else {
                 currentLang = 'en';
                 htmlRoot.setAttribute('lang', 'en');
@@ -476,9 +477,9 @@
                 elements.forEach(el => {
                     if(el.dataset.en) el.innerHTML = el.dataset.en;
                 });
-                if(appFrame) {
-                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en";
-                }
+                // تحديث روابط الـ iFrame لتعمل باللغة الإنجليزية داخل التطبيقين
+                if(appFrame) appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en";
+                if(creditFrame) creditFrame.src = "https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true&lang=en";
             }
         }
     </script>
