@@ -248,9 +248,9 @@
                 </p>
             </div>
 
-            <!-- Interactive Container Frame -->
-            <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden mb-8">
-                <!-- Frame Header Bar with Instant Wake-Up Button -->
+            <!-- Interactive Container Frame with Fallback Wake-Up Overlay -->
+            <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden mb-8 relative">
+                <!-- Frame Header Bar -->
                 <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap justify-between items-center gap-4">
                     <div class="flex items-center gap-3">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -259,19 +259,34 @@
                         <span class="text-sm font-semibold ms-2 text-slate-300">WealthPulse-Simulator.streamlit.app</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <!-- Wake Up / Reload App Button -->
-                        <button onclick="wakeUpSimulator()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold px-3 py-2 rounded-xl transition flex items-center gap-1.5 shadow cursor-pointer">
-                            <i class="fa-solid fa-bolt"></i> <span data-en="Wake Up App" data-ar="تنشيط التطبيق">Wake Up App</span>
-                        </button>
                         <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-en="Open Fullscreen" data-ar="فتح في نافذة كاملة">Open Fullscreen</span>
                         </a>
                     </div>
                 </div>
 
+                <!-- Professional Fallback Wake-Up Banner (Appears if app is sleeping) -->
+                <div id="sleep-overlay" class="absolute inset-x-0 bottom-0 top-[64px] bg-slate-900/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8 text-white transition-opacity duration-500">
+                    <div class="w-16 h-16 bg-amber-400/10 border border-amber-400/30 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2" data-en="Wake Up WealthPulse Simulator" data-ar="تنشيط وتشغيل محاكي WealthPulse">Wake Up WealthPulse Simulator</h3>
+                    <p class="text-slate-300 text-sm max-w-md mb-6" data-en="To ensure optimal performance and bypass hosting sleep mode, click below to launch the live application instantly." data-ar="لضمان أفضل أداء وتجاوز وضع السبات السحابي، اضغط أدناه لتشغيل التطبيق الحي فوراً.">
+                        To ensure optimal performance and bypass hosting sleep mode, click below to launch the live application instantly.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <button onclick="dismissOverlay()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2 cursor-pointer text-sm">
+                            <i class="fa-solid fa-power-off"></i> <span data-en="Wake Up & Load Simulator" data-ar="تنشيط وتحميل المحاكي">Wake Up & Load Simulator</span>
+                        </button>
+                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-xl transition border border-slate-700 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-up-right-from-square"></i> <span data-en="Open in New Tab" data-ar="فتح في تبويب مستقل">Open in New Tab</span>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Embedded Live App iFrame -->
                 <div class="w-full h-[850px] bg-slate-50 relative overflow-hidden">
-                    <iframe id="wealthpulse-iframe" src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
+                    <iframe id="wealthpulse-iframe" src="about:blank" data-src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
                 </div>
             </div>
 
@@ -400,9 +415,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Synchronized Language Switching & Smart Wake-Up Function -->
+    <!-- JavaScript for Synchronized Language Switching & Professional Fallback Overlay -->
     <script>
         let currentLang = 'en';
+        
         function toggleLanguage() {
             const htmlRoot = document.getElementById('html-root');
             const langBtn = document.getElementById('lang-btn');
@@ -417,7 +433,7 @@
                 elements.forEach(el => {
                     if(el.dataset.ar) el.innerHTML = el.dataset.ar;
                 });
-                if(appFrame) {
+                if(appFrame && appFrame.src !== "about:blank") {
                     appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=ar";
                 }
             } else {
@@ -428,29 +444,28 @@
                 elements.forEach(el => {
                     if(el.dataset.en) el.innerHTML = el.dataset.en;
                 });
-                if(appFrame) {
+                if(appFrame && appFrame.src !== "about:blank") {
                     appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en";
                 }
             }
         }
 
-        // --- Smart Wake Up Function for the Streamlit App ---
-        function wakeUpSimulator() {
+        // --- Professional Fallback Wake-Up Action ---
+        function dismissOverlay() {
+            const overlay = document.getElementById('sleep-overlay');
             const iframe = document.getElementById('wealthpulse-iframe');
-            const appUrl = "https://wealthpulse-simulator.streamlit.app/";
             
-            // فتح نافذة خفية مؤقتة لإجبار السيرفر على الاستيقاظ الفعلي
-            const wakeWindow = window.open(appUrl, '_blank', 'width=100,height=100,left=-9999,top=-9999');
+            // إخفاء الغطاء الأنيق
+            if (overlay) {
+                overlay.style.opacity = '0';
+                setTimeout(() => { overlay.style.display = 'none'; }, 500);
+            }
             
-            // إغلاق النافذة المؤقتة وتحديث الـ iframe بعد 3.5 ثانية
-            setTimeout(() => {
-                if (wakeWindow) {
-                    try { wakeWindow.close(); } catch(e) {}
-                }
-                if (iframe) {
-                    iframe.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=" + currentLang + "&t=" + new Date().getTime();
-                }
-            }, 3500);
+            // تحميل الـ iframe بالرابط الفعلي لإجبار الخادم على الاستيقاظ أمام المستخدم مباشرة
+            if (iframe) {
+                const langParam = currentLang === 'ar' ? 'ar' : 'en';
+                iframe.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=" + langParam;
+            }
         }
     </script>
 </body>
