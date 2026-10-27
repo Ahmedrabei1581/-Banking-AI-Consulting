@@ -250,7 +250,7 @@
 
             <!-- Interactive Container Frame -->
             <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden mb-8">
-                <!-- Frame Header Bar -->
+                <!-- Frame Header Bar with Instant Wake-Up Button -->
                 <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap justify-between items-center gap-4">
                     <div class="flex items-center gap-3">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -259,6 +259,10 @@
                         <span class="text-sm font-semibold ms-2 text-slate-300">WealthPulse-Simulator.streamlit.app</span>
                     </div>
                     <div class="flex items-center gap-3">
+                        <!-- Wake Up / Reload App Button -->
+                        <button onclick="wakeUpSimulator()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold px-3 py-2 rounded-xl transition flex items-center gap-1.5 shadow cursor-pointer">
+                            <i class="fa-solid fa-bolt"></i> <span data-en="Wake Up App" data-ar="تنشيط التطبيق">Wake Up App</span>
+                        </button>
                         <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-en="Open Fullscreen" data-ar="فتح في نافذة كاملة">Open Fullscreen</span>
                         </a>
@@ -267,7 +271,7 @@
 
                 <!-- Embedded Live App iFrame -->
                 <div class="w-full h-[850px] bg-slate-50 relative overflow-hidden">
-                    <iframe src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
+                    <iframe id="wealthpulse-iframe" src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
                 </div>
             </div>
 
@@ -396,14 +400,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Synchronized Language Switching & Smart Keep-Alive Ping -->
+    <!-- JavaScript for Synchronized Language Switching & Instant Wake-Up Function -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
             const htmlRoot = document.getElementById('html-root');
             const langBtn = document.getElementById('lang-btn');
             const elements = document.querySelectorAll('[data-en]');
-            const appFrame = document.querySelector('iframe[title="WealthPulse Simulator"]');
+            const appFrame = document.getElementById('wealthpulse-iframe');
 
             if (currentLang === 'en') {
                 currentLang = 'ar';
@@ -430,28 +434,14 @@
             }
         }
 
-        // --- Smart Keep-Alive Ping Script for Streamlit Apps ---
-        const streamlitApps = [
-            "https://wealthpulse-simulator.streamlit.app/?embed=true",
-            "https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true"
-        ];
-
-        function wakeUpStreamlitApps() {
-            streamlitApps.forEach(url => {
-                fetch(url, { mode: 'no-cors', cache: 'no-cache' })
-                    .then(() => {
-                        console.log("Ping sent successfully to: " + url);
-                    })
-                    .catch(err => {
-                        console.log("Background wake-up initiated.");
-                    });
-            });
+        // --- Instant Wake Up Function for the Streamlit App ---
+        function wakeUpSimulator() {
+            const iframe = document.getElementById('wealthpulse-iframe');
+            if (iframe) {
+                // Force reloading the iframe to trigger server wake-up instantly
+                iframe.src = iframe.src;
+            }
         }
-
-        // Trigger wake-up script automatically once the main page is fully loaded
-        window.addEventListener('DOMContentLoaded', (event) => {
-            wakeUpStreamlitApps();
-        });
     </script>
 </body>
 </html>
