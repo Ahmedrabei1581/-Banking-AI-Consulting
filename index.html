@@ -237,72 +237,70 @@
         </div>
     </section>
 
-    <!-- WealthPulse Simulator Live Interactive Section -->
+    <!-- WealthPulse Simulator Live Showcase Section (Direct Interactive Showcase) -->
     <section id="wealthpulse-section" class="py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Live Streamlit Interactive Tool" data-ar="أداة تفاعلية حية">Live Streamlit Interactive Tool</span>
+                <span class="text-xs font-bold text-blue-900 bg-blue-100 px-3 py-1 rounded-full uppercase tracking-wider" data-en="Live Streamlit Application" data-ar="تطبيق مصرفي تفاعلي حي">Live Streamlit Application</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4" data-en="WealthPulse: Advanced Banking Return & Yield Simulator" data-ar="محاكي العوائد والودائع المصرفية المتقدم WealthPulse">WealthPulse: Advanced Banking Return & Yield Simulator</h2>
-                <p class="text-slate-600 text-base" data-en="Interact with the live simulator below, compute compound interest, deposit yields, and export financial output reports instantly." data-ar="تفاعل مع المحاكي الحي أدناه، احسب الفوائد المركبة وعوائد الودائع، وقم بتحميل تقارير المخرجات المالية فوراً.">
-                    Interact with the live simulator below, compute compound interest, deposit yields, and export financial output reports instantly.
+                <p class="text-slate-600 text-base" data-en="Compute compound interest, deposit yields, compare certificate structures, and export financial PDF/Excel output reports instantly." data-ar="احسب الفوائد المركبة، عوائد الشهادات والودائع المصرفية، وقم باستخراج التقارير المالية التفصيلية مباشرة.">
+                    Compute compound interest, deposit yields, compare certificate structures, and export financial PDF/Excel output reports instantly.
                 </p>
             </div>
 
-            <!-- Interactive Container Frame with Fallback Wake-Up Overlay -->
-            <div class="bg-white rounded-3xl border border-slate-300 shadow-2xl overflow-hidden mb-8 relative">
-                <!-- Frame Header Bar -->
-                <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap justify-between items-center gap-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
-                        <span class="text-sm font-semibold ms-2 text-slate-300">WealthPulse-Simulator.streamlit.app</span>
+            <!-- Premium Direct Action Card (No iFrame Sleeping Issues) -->
+            <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden p-8 md:p-12 text-white relative">
+                <div class="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="grid md:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="md:col-span-8 text-start rtl:text-right">
+                        <div class="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs px-3.5 py-1.5 rounded-full mb-4">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span data-en="Financial Engineering Tool" data-ar="أداة الهندسة المالية والمصرفية">Financial Engineering Tool</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4" data-en="Ready to Simulate Yields & Financial Portfolios?" data-ar="جاهز لمحاكاة العوائد والمحافظ الاستثمارية؟">
+                            Ready to Simulate Yields & Financial Portfolios?
+                        </h3>
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6" data-en="Launch the WealthPulse application in full screen to experience high-speed banking calculations, multi-currency yield projections, and instant statement downloads." data-ar="قم بتشغيل تطبيق WealthPulse في نافذة كاملة لتجربة أسرع للعمليات الحسابية المصرفية، وتوقعات العوائد متعددة العملات، واستخراج التقارير المعتمدة.">
+                            Launch the WealthPulse application in full screen to experience high-speed banking calculations, multi-currency yield projections, and instant statement downloads.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-lg flex items-center gap-3 text-base">
+                                <i class="fa-solid fa-rocket text-lg"></i>
+                                <span data-en="Launch WealthPulse App Live" data-ar="تشغيل تطبيق WealthPulse الحي">Launch WealthPulse App Live</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs ms-1"></i>
+                            </a>
+                            <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-4 rounded-xl transition border border-slate-700 flex items-center gap-2 text-sm">
+                                <i class="fa-brands fa-github text-lg"></i>
+                                <span data-en="View Source Code" data-ar="عرض كود المصدر على GitHub">View Source Code</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-en="Open Fullscreen" data-ar="فتح في نافذة كاملة">Open Fullscreen</span>
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Professional Fallback Wake-Up Banner (Appears if app is sleeping) -->
-                <div id="sleep-overlay" class="absolute inset-x-0 bottom-0 top-[64px] bg-slate-900/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8 text-white transition-opacity duration-500">
-                    <div class="w-16 h-16 bg-amber-400/10 border border-amber-400/30 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-lg">
-                        <i class="fa-solid fa-bolt"></i>
+                    <div class="md:col-span-4 bg-slate-900/80 p-6 rounded-2xl border border-slate-800 backdrop-blur-sm">
+                        <h4 class="font-bold text-amber-400 text-sm mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle"></i> <span data-en="Key Capabilities" data-ar="المميزات الرئيسية">Key Capabilities</span>
+                        </h4>
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-caret-right text-blue-400"></i>
+                                <span data-en="Compound Interest & Certificate Yields" data-ar="الفوائد المركبة وعوائد الشهادات">Compound Interest & Certificate Yields</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-caret-right text-blue-400"></i>
+                                <span data-en="Official PDF & Excel Statements" data-ar="تصدير كشوف الحساب بصيغة PDF و Excel">Official PDF & Excel Statements</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-caret-right text-blue-400"></i>
+                                <span data-en="Full Bilingual Support (AR / EN)" data-ar="دعم كامل للغتين العربية والإنجليزية">Full Bilingual Support (AR / EN)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-caret-right text-blue-400"></i>
+                                <span data-en="Bank-Grade Precision Analytics" data-ar="دقة حسابية متوافقة مع الأنظمة المصرفية">Bank-Grade Precision Analytics</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2" data-en="Wake Up WealthPulse Simulator" data-ar="تنشيط وتشغيل محاكي WealthPulse">Wake Up WealthPulse Simulator</h3>
-                    <p class="text-slate-300 text-sm max-w-md mb-6" data-en="To ensure optimal performance and bypass hosting sleep mode, click below to launch the live application instantly." data-ar="لضمان أفضل أداء وتجاوز وضع السبات السحابي، اضغط أدناه لتشغيل التطبيق الحي فوراً.">
-                        To ensure optimal performance and bypass hosting sleep mode, click below to launch the live application instantly.
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center">
-                        <button onclick="dismissOverlay()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2 cursor-pointer text-sm">
-                            <i class="fa-solid fa-power-off"></i> <span data-en="Wake Up & Load Simulator" data-ar="تنشيط وتحميل المحاكي">Wake Up & Load Simulator</span>
-                        </button>
-                        <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3.5 rounded-xl transition border border-slate-700 text-sm flex items-center gap-2">
-                            <i class="fa-solid fa-up-right-from-square"></i> <span data-en="Open in New Tab" data-ar="فتح في تبويب مستقل">Open in New Tab</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Embedded Live App iFrame -->
-                <div class="w-full h-[850px] bg-slate-50 relative overflow-hidden">
-                    <iframe id="wealthpulse-iframe" src="about:blank" data-src="https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en" class="w-full h-[900px] border-0 -mb-12" title="WealthPulse Simulator"></iframe>
-                </div>
-            </div>
-
-            <!-- Action Toolbar -->
-            <div class="bg-gradient-to-r from-blue-950 to-slate-900 text-white p-8 rounded-2xl shadow-lg flex flex-wrap justify-between items-center gap-6">
-                <div>
-                    <h3 class="text-xl font-bold mb-1" data-en="Need custom financial models or report exports?" data-ar="هل تحتاج نماذج مالية مخصصة أو تقارير مصدّرة؟">Need custom financial models or report exports?</h3>
-                    <p class="text-slate-300 text-xs md:text-sm" data-en="You can run simulations, analyze yields, and download structured analytical outputs." data-ar="يمكنك تشغيل المحاكاة، تحليل العوائد، وتحميل المخرجات التحليلية المهيكلة مباشرة.">You can run simulations, analyze yields, and download structured analytical outputs.</p>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://wealthpulse-simulator.streamlit.app/" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow flex items-center gap-2">
-                        <i class="fa-solid fa-globe"></i> <span data-en="Visit App Directly" data-ar="زيارة التطبيق مباشرة">Visit App Directly</span>
-                    </a>
-                    <a href="https://github.com/ahmedrabei1581/WealthPulse-Simulator" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition border border-slate-700 flex items-center gap-2">
-                        <i class="fa-brands fa-github"></i> <span data-en="GitHub Repository" data-ar="مستودع الكود GitHub">GitHub Repository</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -415,15 +413,13 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Synchronized Language Switching & Professional Fallback Overlay -->
+    <!-- JavaScript for Synchronized Language Switching -->
     <script>
         let currentLang = 'en';
-        
         function toggleLanguage() {
             const htmlRoot = document.getElementById('html-root');
             const langBtn = document.getElementById('lang-btn');
             const elements = document.querySelectorAll('[data-en]');
-            const appFrame = document.getElementById('wealthpulse-iframe');
 
             if (currentLang === 'en') {
                 currentLang = 'ar';
@@ -433,9 +429,6 @@
                 elements.forEach(el => {
                     if(el.dataset.ar) el.innerHTML = el.dataset.ar;
                 });
-                if(appFrame && appFrame.src !== "about:blank") {
-                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=ar";
-                }
             } else {
                 currentLang = 'en';
                 htmlRoot.setAttribute('lang', 'en');
@@ -444,27 +437,6 @@
                 elements.forEach(el => {
                     if(el.dataset.en) el.innerHTML = el.dataset.en;
                 });
-                if(appFrame && appFrame.src !== "about:blank") {
-                    appFrame.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=en";
-                }
-            }
-        }
-
-        // --- Professional Fallback Wake-Up Action ---
-        function dismissOverlay() {
-            const overlay = document.getElementById('sleep-overlay');
-            const iframe = document.getElementById('wealthpulse-iframe');
-            
-            // إخفاء الغطاء الأنيق
-            if (overlay) {
-                overlay.style.opacity = '0';
-                setTimeout(() => { overlay.style.display = 'none'; }, 500);
-            }
-            
-            // تحميل الـ iframe بالرابط الفعلي لإجبار الخادم على الاستيقاظ أمام المستخدم مباشرة
-            if (iframe) {
-                const langParam = currentLang === 'ar' ? 'ar' : 'en';
-                iframe.src = "https://wealthpulse-simulator.streamlit.app/?embed=true&lang=" + langParam;
             }
         }
     </script>
