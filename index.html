@@ -396,7 +396,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Synchronized Language Switching -->
+    <!-- JavaScript for Synchronized Language Switching & Smart Keep-Alive Ping -->
     <script>
         let currentLang = 'en';
         function toggleLanguage() {
@@ -429,6 +429,29 @@
                 }
             }
         }
+
+        // --- Smart Keep-Alive Ping Script for Streamlit Apps ---
+        const streamlitApps = [
+            "https://wealthpulse-simulator.streamlit.app/?embed=true",
+            "https://credit-risk-assessment-agent-7agrdsdsppjntememb64bw.streamlit.app/?embed=true"
+        ];
+
+        function wakeUpStreamlitApps() {
+            streamlitApps.forEach(url => {
+                fetch(url, { mode: 'no-cors', cache: 'no-cache' })
+                    .then(() => {
+                        console.log("Ping sent successfully to: " + url);
+                    })
+                    .catch(err => {
+                        console.log("Background wake-up initiated.");
+                    });
+            });
+        }
+
+        // Trigger wake-up script automatically once the main page is fully loaded
+        window.addEventListener('DOMContentLoaded', (event) => {
+            wakeUpStreamlitApps();
+        });
     </script>
 </body>
 </html>
