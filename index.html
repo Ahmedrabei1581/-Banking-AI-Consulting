@@ -57,9 +57,9 @@
                     <i class="fa-solid fa-building-columns text-amber-500"></i> Credit Risk AI
                 </a>
                 <a href="#apps" class="hover:text-blue-900 transition" data-en="AI Apps" data-ar="التطبيقات الذكية">AI Apps</a>
-                <!-- Language Switcher Button -->
+                <!-- Language Switcher Button (Updated to Egypt Flag) -->
                 <button onclick="toggleLanguage()" id="lang-btn" class="bg-slate-200 text-slate-800 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-300 transition">
-                    العربية 🇸🇦
+                    العربية 🇪🇬
                 </button>
                 <a href="#contact" class="bg-blue-950 text-amber-400 px-5 py-2 rounded-xl hover:bg-blue-900 transition shadow" data-en="Book Consultation" data-ar="حجز استشارة">Book Consultation</a>
             </nav>
@@ -67,7 +67,7 @@
             <!-- Mobile Nav Toggle -->
             <div class="flex items-center gap-2 md:hidden">
                 <button onclick="toggleLanguage()" id="lang-btn-mob" class="bg-slate-200 text-slate-800 px-2.5 py-1.5 rounded-lg text-xs font-bold">
-                    AR 🇸🇦
+                    AR 🇪🇬
                 </button>
                 <button onclick="toggleMobileMenu()" class="text-slate-800 p-2 focus:outline-none">
                     <i class="fa-solid fa-bars text-xl"></i>
@@ -525,8 +525,8 @@
                 currentLang = 'en';
                 htmlRoot.setAttribute('lang', 'en');
                 htmlRoot.setAttribute('dir', 'ltr');
-                if(langBtn) langBtn.innerHTML = 'العربية 🇸🇦';
-                if(langBtnMob) langBtnMob.innerHTML = 'AR 🇸🇦';
+                if(langBtn) langBtn.innerHTML = 'العربية 🇪🇬';
+                if(langBtnMob) langBtnMob.innerHTML = 'AR 🇪🇬';
                 elements.forEach(el => {
                     if(el.dataset.en) el.innerHTML = el.dataset.en;
                 });
